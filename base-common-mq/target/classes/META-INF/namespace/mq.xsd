@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.xiaoying.tv/schema/base-common/mq"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.xiaoying.tv/schema/base-common/mq"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:element name="consumer">
+        <xsd:complexType>
+            <xsd:attribute name="consume-group" type="xsd:string" use="required"/>
+            <xsd:attribute name="max-retry-time" type="xsd:int" default="-1"/>
+            <xsd:attribute name="selector-type" type="xsd:string" default="TAG"/>
+            <xsd:attribute name="selector-expression" type="xsd:string" default="*"/>
+            <xsd:attribute name="consume-mode" type="xsd:string" default="CONCURRENTLY"/>
+            <xsd:attribute name="message-model" type="xsd:string" default="CLUSTERING"/>
+            <xsd:attribute name="consume-thread-max" type="xsd:int" default="64"/>
+            <xsd:attribute name="bean-ref" type="xsd:string" use="required"/>
+            <xsd:attribute name="topic" type="xsd:string" use="required"/>
+            <xsd:attribute name="delay-level" type="xsd:int" default="0"/>
+            <xsd:attribute name="enable-trace" type="xsd:boolean" default="false"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="producer">
+        <xsd:complexType>
+            <xsd:attribute name="enable" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,12 @@
+@version:1.0.1-RELEASE
+@date:2019-01-24
+@author:李进
+@changelog: 增加系统工具类
+---------------------------------------------------------------
+@version:1.0.5-RELEASE
+@date:2019-07-30
+@author:杨烨
+@changelog:
+    增加批量发送接口
+    升级rocketmq client版本到4.5.1
+    增加追踪配置(需要开启该配置需要broker配置）
